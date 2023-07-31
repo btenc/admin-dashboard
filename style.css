@@ -6,6 +6,10 @@
     --accent-color: orange;
 }
 
+a{
+    text-decoration: none;
+}
+
 *{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
@@ -68,6 +72,10 @@
 
     grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
     grid-auto-rows: 230px;
+}
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .section-label{
@@ -167,9 +175,11 @@ button:hover{
     border-radius: 99rem;
     border-width: 2px;
     padding: 0.3rem 1rem;
+    background-color: var(--main-bg-color);
 }
 
 .user-name-full{
+    color: black;
     font-size: 1.1rem;
 }
   
@@ -213,3 +223,7 @@ button:hover{
 .icon.privacy{
     content: url(/content/icons/privacy.svg);
 }
+
+.icon:hover{;
+}
+
