@@ -4,14 +4,19 @@
   --card-bg-color: #ffffff;
   --header-bg-color: #ffffff;
   --accent-color: orange;
+  --body-font-color: black;
+  --body-alt-font-color: rgb(73, 73, 73);
+  --alt-font-color: white;
+
+  font-size: 18px;
 }
 
 @font-face {
-    font-family: 'avenirheavy';
-    src: url('/content/font/avenir_heavy.woff2') format('woff2'),
-         url('content/font/avenir_heavy.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "avenirheavy";
+  src: url("/content/font/avenir_heavy.woff2") format("woff2"),
+    url("content/font/avenir_heavy.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -20,12 +25,15 @@
 
 a {
   text-decoration: none;
+  color: var(--body-font-color);
 }
 
 .layout {
   display: grid;
   grid-template-rows: 1fr 10fr;
   grid-template-columns: 16rem 1fr 16rem;
+
+  background-color: var(--sidebar-bg-color); /*hack to fix overflow bug*/
 }
 
 .header {
@@ -43,7 +51,7 @@ a {
 }
 
 .side-text {
-  color: white;
+  color: var(--alt-font-color);
 }
 
 .sidebar {
@@ -64,11 +72,11 @@ a {
 }
 
 .sidebar-col > .side-text {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .sidebar-col > .side-text.main {
-  font-size: 1.8rem;
+  font-size: 1.59rem;
 }
 
 .cards {
@@ -103,13 +111,13 @@ a {
   border-color: var(--accent-color);
 }
 
-.card{
+.card {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: .3vh;
+  gap: 0.3vh;
 }
 
-.icons{
+.icons {
   justify-self: end;
 }
 
@@ -117,19 +125,70 @@ a {
   background-color: var(--main-bg-color);
 }
 
-.card-body{
-  font-size: .85rem;
-  color: rgb(73, 73, 73);
+.card-body {
+  font-size: 0.85rem;
+  color: var(--body-alt-font-color);
 }
 
-.rightbar,
-.rightbar * {
+.rightbar {
   background-color: var(--main-bg-color);
 }
 
 .rightbar {
   display: grid;
   grid-template-rows: 2.7rem 20rem 2.7rem 20rem;
+}
+
+.info-card.card{
+  padding-top: .2rem;
+  display: grid;
+  align-items: center;
+}
+
+.info-card.card.announcements {
+  grid-template-rows: 1fr auto 1fr auto 1fr;
+}
+
+.info-card.card.trending{
+  grid-template-rows: repeat(4,1fr);
+
+}
+
+.trending-profile{
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  align-items: center;
+  gap: .2rem;
+}
+
+.trending-profile-container{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.project-name, .profile-text{
+  font-size: .8rem;
+}
+
+.icon.pfp{
+  width: 55px;
+  margin-bottom: 3px;
+}
+
+.info-card-title {
+  font-size: 0.9rem;
+}
+
+.info-card-body {
+  color: var(--body-alt-font-color);
+  font-size: 0.65rem;
+}
+
+.info-card-bar {
+  opacity: 0.3;
+  height: 0.12rem;
+  border-radius: 99rem;
+  background-color: var(--accent-color);
 }
 
 .section-label.right-label {
@@ -188,7 +247,7 @@ button.share {
   border-radius: 99rem;
   border-width: 0.5px;
   padding: 0.8rem 2rem;
-  color: white;
+  color: var(--alt-font-color);
   background-color: var(--sidebar-bg-color);
 }
 
@@ -205,7 +264,7 @@ button:hover {
 }
 
 .user-name-full {
-  color: black;
+  color: var(--body-font-color);
   font-size: 1.1rem;
 }
 
@@ -249,12 +308,24 @@ button:hover {
 .icon.privacy {
   content: url(/content/icons/privacy.svg);
 }
-.icon.star{
+.icon.star {
   content: url(/content/icons/star.svg);
 }
-.icon.watch{
+.icon.watch {
   content: url(/content/icons/watch.svg);
 }
-.icon.share{
+.icon.share {
   content: url(/content/icons/share.svg);
+}
+.icon.pfp1{
+  content: url(/content/icons/pfp-top.jpg);
+}
+.icon.pfp2{
+  content: url(/content/icons/pfp-second.png);
+}
+.icon.pfp3{
+  content: url(/content/icons/pfp.jpg);
+}
+.icon.pfp4{
+  content: url(/content/icons/pfp-last.jpg);
 }
