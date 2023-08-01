@@ -201,17 +201,17 @@ a {
 }
 
 .icon.search {
-  content: url(/content/icons/search.svg);
+  content: url(./content/icons/search.svg);
   width: 30px;
 }
 
 .icon.bell {
-  content: url(/content/icons/bell.svg);
+  content: url(./content/icons/bell.svg);
   width: 30px;
 }
 
 .icon.user {
-  content: url(/content/icons/pfp.jpg);
+  content: url(../content/icons/pfp.jpg);
   width: 50px;
 }
 
@@ -278,55 +278,55 @@ button:hover {
 }
 
 .icon.dashboard {
-  content: url(/content/icons/dashboard.svg);
+  content: url(./content/icons/dashboard.svg);
   width: 33px;
 }
 
 .icon.home {
-  content: url(/content/icons/home.svg);
+  content: url(./content/icons/home.svg);
 }
 .icon.profile {
-  content: url(/content/icons/profile.svg);
+  content: url(./content/icons/profile.svg);
 }
 .icon.messages {
-  content: url(/content/icons/messages.svg);
+  content: url(./content/icons/messages.svg);
 }
 .icon.history {
-  content: url(/content/icons/history.svg);
+  content: url(./content/icons/history.svg);
 }
 .icon.tasks {
-  content: url(/content/icons/tasks.svg);
+  content: url(./content/icons/tasks.svg);
 }
 .icon.communities {
-  content: url(/content/icons/communities.svg);
+  content: url(./content/icons/communities.svg);
 }
 .icon.settings {
-  content: url(/content/icons/settings.svg);
+  content: url(./content/icons/settings.svg);
 }
 .icon.support {
-  content: url(/content/icons/support.svg);
+  content: url(./content/icons/support.svg);
 }
 .icon.privacy {
-  content: url(/content/icons/privacy.svg);
+  content: url(./content/icons/privacy.svg);
 }
 .icon.star {
-  content: url(/content/icons/star.svg);
+  content: url(./content/icons/star.svg);
 }
 .icon.watch {
-  content: url(/content/icons/watch.svg);
+  content: url(./content/icons/watch.svg);
 }
 .icon.share {
-  content: url(/content/icons/share.svg);
+  content: url(./content/icons/share.svg);
 }
 .icon.pfp1 {
-  content: url(/content/icons/pfp-top.jpg);
+  content: url(./content/icons/pfp-top.jpg);
 }
 .icon.pfp2 {
-  content: url(/content/icons/pfp-second.png);
+  content: url(./content/icons/pfp-second.png);
 }
 .icon.pfp3 {
-  content: url(/content/icons/pfp.jpg);
+  content: url(./content/icons/pfp.jpg);
 }
 .icon.pfp4 {
-  content: url(/content/icons/pfp-last.jpg);
+  content: url(./content/icons/pfp-last.jpg);
 }
