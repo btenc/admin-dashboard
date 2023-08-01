@@ -211,7 +211,7 @@ a {
 }
 
 .icon.user {
-  content: url(../content/icons/pfp.jpg);
+  content: url(./content/icons/pfp.jpg);
   width: 50px;
 }
 
