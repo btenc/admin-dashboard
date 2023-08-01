@@ -13,8 +13,8 @@
 
 @font-face {
   font-family: "avenirheavy";
-  src: url("/content/font/avenir_heavy.woff2") format("woff2"),
-    url("content/font/avenir_heavy.woff") format("woff");
+  src: url("./content/font/avenir_heavy.woff2") format("woff2"),
+    url("./content/font/avenir_heavy.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
