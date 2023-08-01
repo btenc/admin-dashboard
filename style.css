@@ -55,7 +55,6 @@ a {
 }
 
 .sidebar {
-  height: 100vh;
   grid-row: 1/-1;
 
   display: grid;
@@ -69,6 +68,9 @@ a {
   display: grid;
   gap: 0.3vh;
   grid-template-rows: repeat(12, 1fr);
+
+  top: 1.6rem;
+  position: sticky;
 }
 
 .sidebar-col > .side-text {
