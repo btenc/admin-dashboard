@@ -1,229 +1,260 @@
-:root{
-    --main-bg-color: #E7E5E4;
-    --sidebar-bg-color: #1992D4;
-    --card-bg-color: #FFFFFF;
-    --header-bg-color: #FFFFFF;
-    --accent-color: orange;
+:root {
+  --main-bg-color: #e7e5e4;
+  --sidebar-bg-color: #1992d4;
+  --card-bg-color: #ffffff;
+  --header-bg-color: #ffffff;
+  --accent-color: orange;
 }
 
-a{
-    text-decoration: none;
+@font-face {
+    font-family: 'avenirheavy';
+    src: url('/content/font/avenir_heavy.woff2') format('woff2'),
+         url('content/font/avenir_heavy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-*{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
+* {
+  font-family: avenirheavy, Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 .layout {
-    display: grid;
-    grid-template-rows: 1fr 10fr;
-    grid-template-columns: 16rem 1fr 16rem;
-  }
-
-.header{
-    grid-column: 2/-1;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  grid-template-columns: 16rem 1fr 16rem;
 }
 
-.header, .header *{
-    background-color: var(--header-bg-color);
+.header {
+  grid-column: 2/-1;
 }
 
-.sidebar, .sidebar *{
-    background-color: var(--sidebar-bg-color);
+.header,
+.header * {
+  background-color: var(--header-bg-color);
 }
 
-.side-text{
-    color: white;
+.sidebar,
+.sidebar * {
+  background-color: var(--sidebar-bg-color);
 }
 
-.sidebar{
-    height: 100vh;
-    grid-row: 1/-1;
-
-    display: grid;
-    align-items: start;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 2fr 1fr;
-    padding: 1.5rem;
-    
-
+.side-text {
+  color: white;
 }
 
-.sidebar-col{
-    display: grid;
-    gap: .3vh;
-    grid-template-rows: repeat(12,1fr);
+.sidebar {
+  height: 100vh;
+  grid-row: 1/-1;
+
+  display: grid;
+  align-items: start;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 2fr 1fr;
+  padding: 1.5rem;
 }
 
-.sidebar-col>.side-text{
-    font-size: 1.4rem;
+.sidebar-col {
+  display: grid;
+  gap: 0.3vh;
+  grid-template-rows: repeat(12, 1fr);
 }
 
-.sidebar-col>.side-text.main{
-    font-size: 1.8rem
+.sidebar-col > .side-text {
+  font-size: 1.4rem;
 }
 
-.cards{
-    display: grid;
-    padding: 1.5rem;
-    padding-top: .2rem;
-    gap: 1rem;
-
-    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
-    grid-auto-rows: 230px;
+.sidebar-col > .side-text.main {
+  font-size: 1.8rem;
 }
 
-.cards>.card{
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+.cards {
+  display: grid;
+  padding: 1.5rem;
+  padding-top: 0.2rem;
+  gap: 1rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-rows: 230px;
 }
 
-.section-label{
-    font-size: 1.5rem;
-    padding-top: 0.7rem;
-    padding-left: 1.2rem;
+.cards > .card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-.card, .info-card.card{
-    border-radius: 15px;
-    background-color: var(--card-bg-color);
-    padding: 0.7rem;
-
-    border-left: 6px solid;
-    border-color: var(--accent-color);
+.section-label {
+  font-size: 1.5rem;
+  padding-top: 0.7rem;
+  padding-left: 2rem;
 }
 
-.body{
-    background-color: var(--main-bg-color);
+.card,
+.info-card.card {
+  border-radius: 15px;
+  background-color: var(--card-bg-color);
+  padding: 0.9rem;
+  padding-bottom: 0.1rem;
+
+  border-left: 6px solid;
+  border-color: var(--accent-color);
 }
 
-.rightbar, .rightbar *{
-    background-color: var(--main-bg-color);
+.card{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: .3vh;
 }
 
-.rightbar{
-    display: grid;
-    grid-template-rows: 2.7rem 20rem 2.7rem 20rem;
+.icons{
+  justify-self: end;
 }
 
-.section-label.right-label{
-    padding-left: 0;
+.body {
+  background-color: var(--main-bg-color);
 }
 
-.info-card{
-    margin-right: 1vw;
+.card-body{
+  font-size: .85rem;
+  color: rgb(73, 73, 73);
 }
 
-.icon.search{
-    content: url(/content/icons/search.svg);
-    width: 30px;
-
+.rightbar,
+.rightbar * {
+  background-color: var(--main-bg-color);
 }
 
-.icon.bell{
-    content: url(/content/icons/bell.svg);
-    width: 30px;
+.rightbar {
+  display: grid;
+  grid-template-rows: 2.7rem 20rem 2.7rem 20rem;
 }
 
-.icon.user{
-    content: url(/content/pfp.jpg);
-    width: 50px;
+.section-label.right-label {
+  padding-left: 0.3rem;
 }
 
-.icon.user.large{
-    width: 75px
+.info-card {
+  margin-right: 1vw;
 }
 
-.header{
-    padding: 28px;
-    padding-top: 0px;
-    padding-bottom: 8px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    align-items: end;
+.icon.search {
+  content: url(/content/icons/search.svg);
+  width: 30px;
 }
 
-.header-row-1{
-    display: grid;
-    grid-template-columns: auto 1fr auto auto auto;
-    align-items: center;
-    gap: 0.5vw;
-
+.icon.bell {
+  content: url(/content/icons/bell.svg);
+  width: 30px;
 }
 
-.header-row-2{
-    display: grid;
-    grid-template-columns: auto 1fr auto auto auto;
-    align-items: center;
-    gap: 1vw;
+.icon.user {
+  content: url(/content/icons/pfp.jpg);
+  width: 50px;
 }
 
-button.new, button.upload, button.share{
-    border-radius: 99rem;
-    border-width: 0.5px;
-    padding: 0.8rem 2rem;
-    color: white;
-    background-color: var(--sidebar-bg-color);
+.icon.user.large {
+  width: 75px;
 }
 
-button:hover{
-    background-color: var(--accent-color);
+.header {
+  padding: 28px;
+  padding-top: 0px;
+  padding-bottom: 8px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: end;
 }
 
-.searchbar{
-    max-width: 600px;
-    border-radius: 99rem;
-    border-width: 2px;
-    padding: 0.3rem 1rem;
-    background-color: var(--main-bg-color);
+.header-row-1 {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto auto;
+  align-items: center;
+  gap: 0.5vw;
 }
 
-.user-name-full{
-    color: black;
-    font-size: 1.1rem;
-}
-  
-.greeting.small{
-    font-size: .9rem;
+.header-row-2 {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto auto;
+  align-items: center;
+  gap: 1vw;
 }
 
-.greeting.large{
-    font-size: 1.6rem;
+button.new,
+button.upload,
+button.share {
+  border-radius: 99rem;
+  border-width: 0.5px;
+  padding: 0.8rem 2rem;
+  color: white;
+  background-color: var(--sidebar-bg-color);
 }
 
-.icon.dashboard{
-    content: url(/content/icons/dashboard.svg);
-    width: 33px;
+button:hover {
+  background-color: var(--accent-color);
 }
 
-.icon.home{
-    content: url(/content/icons/home.svg);
-}
-.icon.profile{
-    content: url(/content/icons/profile.svg);
-}
-.icon.messages{
-    content: url(/content/icons/messages.svg);
-}
-.icon.history{
-    content: url(/content/icons/history.svg);
-}
-.icon.tasks{
-    content: url(/content/icons/tasks.svg);
-}
-.icon.communities{
-    content: url(/content/icons/communities.svg);
-}
-.icon.settings{
-    content: url(/content/icons/settings.svg);
-}
-.icon.support{
-    content: url(/content/icons/support.svg);
-}
-.icon.privacy{
-    content: url(/content/icons/privacy.svg);
+.searchbar {
+  max-width: 600px;
+  border-radius: 99rem;
+  border-width: 2px;
+  padding: 0.3rem 1rem;
+  background-color: var(--main-bg-color);
 }
 
-.icon:hover{;
+.user-name-full {
+  color: black;
+  font-size: 1.1rem;
 }
 
+.greeting.small {
+  font-size: 0.9rem;
+}
+
+.greeting.large {
+  font-size: 1.6rem;
+}
+
+.icon.dashboard {
+  content: url(/content/icons/dashboard.svg);
+  width: 33px;
+}
+
+.icon.home {
+  content: url(/content/icons/home.svg);
+}
+.icon.profile {
+  content: url(/content/icons/profile.svg);
+}
+.icon.messages {
+  content: url(/content/icons/messages.svg);
+}
+.icon.history {
+  content: url(/content/icons/history.svg);
+}
+.icon.tasks {
+  content: url(/content/icons/tasks.svg);
+}
+.icon.communities {
+  content: url(/content/icons/communities.svg);
+}
+.icon.settings {
+  content: url(/content/icons/settings.svg);
+}
+.icon.support {
+  content: url(/content/icons/support.svg);
+}
+.icon.privacy {
+  content: url(/content/icons/privacy.svg);
+}
+.icon.star{
+  content: url(/content/icons/star.svg);
+}
+.icon.watch{
+  content: url(/content/icons/watch.svg);
+}
+.icon.share{
+  content: url(/content/icons/share.svg);
+}
