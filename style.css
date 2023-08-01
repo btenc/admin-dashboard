@@ -32,8 +32,6 @@ a {
   display: grid;
   grid-template-rows: 1fr 10fr;
   grid-template-columns: 16rem 1fr 16rem;
-
-  background-color: var(--sidebar-bg-color); /*hack to fix overflow bug*/
 }
 
 .header {
